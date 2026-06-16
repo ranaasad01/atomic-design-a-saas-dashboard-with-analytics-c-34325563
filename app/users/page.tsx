@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   BarChart,
@@ -475,7 +475,7 @@ export default function UsersPage() {
             animate="visible"
           >
             <div className="flex items-center gap-2 text-sm text-slate-500 mb-3">
-              <span>Pulse Analytics</span>
+              <span>Pulse </span>
               <ChevronRight className="w-3.5 h-3.5" />
               <span className="text-indigo-400 font-medium">Users</span>
             </div>

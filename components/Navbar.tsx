@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
@@ -203,6 +203,7 @@ export default function Navbar() {
                           ? "text-indigo-300 bg-indigo-500/10 border border-indigo-500/20"
                           : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/60"
                       }`}
+                      {...(link.label === "Explore Analytics" ? { style: { color: "#206ccf", backgroundColor: "#1e293b" } } : {})}
                     >
                       {link.label}
                     </span>

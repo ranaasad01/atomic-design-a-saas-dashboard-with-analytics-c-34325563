@@ -65,7 +65,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Link columns */}
-          {footerLinks.map((section) => (
+          {footerLinks.map((section, sectionIndex) => (
             <motion.div
               key={section.section}
               variants={shouldReduce ? {} : fadeInUp}
@@ -75,13 +75,17 @@ export default function Footer() {
                 {section.section}
               </h3>
               <ul className="flex flex-col gap-2">
-                {section.links.map((link) => (
+                {section.links.map((link, linkIndex) => (
                   <li key={link.href + link.label}>
                     <Link
                       href={link.href}
                       className="text-sm text-slate-400 hover:text-slate-100 transition-colors duration-200 hover:translate-x-0.5 inline-block"
                     >
-                      {link.label}
+                      {sectionIndex === 2 && linkIndex === 1 ? (
+                        <span style={{ color: "#206ccf", backgroundColor: "#1e293b" }}>{link.label}</span>
+                      ) : (
+                        link.label
+                      )}
                     </Link>
                   </li>
                 ))}
